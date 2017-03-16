@@ -1,0 +1,57 @@
+/* Form modules */
+
+.form
+	display block
+
+.form__row
+	&_htmlacademy
+		set_padding_vertical_em(16, 0)
+
+	&_skills
+		set_padding_vertical_em(23, 0)
+		clearfix()
+
+	&_js
+		set_padding_vertical_em(62, 45)
+		set_padding_horizontal_em(11, 0)
+
+.form__row-caption
+	font-size (22 * $px_em)
+	line-height 2.22158
+	letter-spacing px_to_em(.2, 22)
+
+	&_js
+		margin-bottom px_to_em(11, 22)
+
+.form__checkbox-container
+	float left
+	width 33.55%
+
+	&:last-child
+		margin-left 2.6%
+		width 30.3%
+
+.form__text
+	position relative
+	clear both
+
+	top px_to_em(-1, 14)
+	margin-bottom px_to_em(14, 14)
+	set_padding_horizontal_em(19, 0, 14)
+	font-size (14 * $px_em)
+	font-weight 400
+	line-height (22 / 14)
+	color #3d3d3d
+	// outline 1px solid tomato
+
+	&_asterisk
+		position absolute
+		top px_to_em(4, 36)
+		left px_to_em(2, 36)
+		font-size (36 * $px_em)
+		line-height 1
+		outline 1px solid blue
+
+.form__slider
+	margin-left 2px
+	clear both

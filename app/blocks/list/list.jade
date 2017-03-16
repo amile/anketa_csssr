@@ -1,0 +1,4 @@
+mixin list(list_of_items, items_class_name='')
+	+b('ul').list&attributes(attributes)
+		for el in list_of_items
+			li.list__item(class=items_class_name)!= el

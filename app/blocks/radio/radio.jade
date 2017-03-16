@@ -1,0 +1,6 @@
+mixin radio(name, option)
+	+b().radio&attributes(attributes)
+		label.radio__label
+			input(type='radio' name=name value=option.value checked=option.checked)
+			span.radio__radio
+			| #{ option.label }

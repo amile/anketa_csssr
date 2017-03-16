@@ -1,0 +1,6 @@
+mixin checkbox(option)
+	+b.checkbox&attributes(attributes)
+		label.checkbox__label
+			input(type='checkbox' name=option.name checked=option.checked)
+			span.checkbox__checkbox
+			| #{ option.label }

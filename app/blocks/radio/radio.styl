@@ -1,0 +1,69 @@
+.radio
+	display inline-block
+
+	margin-left 32px
+
+	&:last-child
+		margin-left 16px
+
+.radio__label
+	position relative
+	top px_to_em(8, 22)
+	padding-left 35px
+	font-size (22 * $px_em)
+	line-height (36 / 22)
+	outline 1px dotted green	
+
+/* .radio__radio
+	position absolute
+	top px_to_em(2, 22)
+	left 0
+	width 30px
+	height 30px
+	background url('/assets/images/radio-in.png') no-repeat 0 0, url('/assets/images/radio-out.png') no-repeat 0 0
+	outline 1px solid tomato
+	transition(all .4s ease 0s)
+
+	&:hover
+		opacity .6
+
+input[type='radio']
+	display none
+
+	&:not(:checked) + .radio__radio
+		background-size 0 0, auto
+
+	&:checked + .radio__radio
+		background-size auto, auto */
+
+.radio__radio
+	position absolute
+	top px_to_em(2, 22)
+	left 0
+	width 30px
+	height 30px
+	background url('/assets/images/radio-out.png') no-repeat 0 0
+	outline 1px solid tomato
+	transition(all .4s ease 0s)
+
+	&:hover
+		opacity .6
+
+	&::after
+		position absolute
+		width 100%
+		height 100%
+		content ''
+		background url('/assets/images/radio-in.png') no-repeat 0 0
+		transition(all .4s ease 0s)
+
+input[type='radio']
+	display none
+
+	&:not(:checked) + .radio__radio::after
+		// background none
+		background-size 0 0
+
+	&:checked + .radio__radio::after
+		// background url('/assets/images/radio-in.png') no-repeat 0 0
+		background-size auto

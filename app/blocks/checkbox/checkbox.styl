@@ -1,0 +1,42 @@
+.checkbox
+	display block
+
+.checkbox__label
+	position relative
+	display block
+	font-size (21 * $px_em)
+	line-height (25 / 21)
+	set_padding_vertical_em(5, 5, 21)
+	padding-left 29px
+	outline 1px solid tomato
+
+.checkbox__checkbox
+	position absolute
+	top px_to_em(2, 21)
+	left 0
+	width 22px
+	height 28px
+	background url('/assets/images/checkbox.png') no-repeat 1px 6px
+	outline 1px solid tomato
+	transition(all .4s ease 0s)
+
+	&:hover
+		opacity .6
+
+	&::after
+		position absolute
+		top -6px
+		left 4px
+		width 100%
+		height 100%
+		content ''
+		transition(all .4s ease 0s)
+
+input[type='checkbox']
+	display none
+
+	&:not(:checked) + .checkbox__checkbox::after
+		background none
+
+	&:checked + .checkbox__checkbox::after
+		background url('/assets/images/checked.png') no-repeat 0 2px

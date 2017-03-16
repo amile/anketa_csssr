@@ -1,0 +1,27 @@
+.input
+	display block
+
+.input__label
+	set_padding_vertical_em(8, 6, 22)
+	set_padding_horizontal_em(0, 15, 22)
+
+.input__wrapper
+	display inline-block
+	flex(1 1 auto)
+	set_padding_vertical_em(0, 26)
+	background-image url('/assets/images/underline.png')
+	background-repeat no-repeat
+	background-position left 0 bottom px_to_em(20)
+	background-size 100% 8px
+	outline 1px solid blue
+
+	&_date
+		flex(0 1 27%)
+
+.input__input 
+	width 100%
+	set_padding_horizontal_em(14, 14, 30)
+	font-family Courier New, monospace
+	font-size (30 * $px_em)
+	line-height (36 / 30)
+	outline 1px solid orange

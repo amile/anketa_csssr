@@ -1,0 +1,4 @@
+mixin slider(list_of_items)
+	+b.slider&attributes(attributes)
+		div.slider__thumb
+		+list(list_of_items, 'list__item_inline slider__item')(class='list_inline')

@@ -1,0 +1,39 @@
+import('sprites/*')
+import('helpers/svg-size')
+@import 'helpers/variables'
+@import 'helpers/mixins'
+@import 'helpers/fonts'
+@import 'helpers/optimize'
+@import 'layouts/layout'
+
+import('../blocks/**/*')
+
+html
+	font-size $base_font_size
+
+body
+	font-size $base_font_size_ems
+	font-family 'PT Sans', sans-serif
+	font-weight 400
+	line-height 1.5
+	color $text_color
+	background-color $bg_color
+
+a, legend, label
+	font-weight 700
+
+input
+	background-color transparent
+	border none
+
+fieldset
+	border none
+
+legend
+	float left
+
+label
+	display inline-block
+
+.display-flex
+	flexbox_display()

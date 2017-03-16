@@ -1,0 +1,80 @@
+[
+    {
+      "input": true,
+      "input_attr": {"type": "text", "name": "fullname", "value": "Михайлец Анна Дмитриевна"},
+      "caption": "Полное ФИО"
+    },
+    {
+      "input": true,
+      "input_attr": {"type": "text", "name": "birth-year", "value": "1985"},
+      "caption": "Год рождения"
+    },
+    {
+      "input": true,
+      "input_attr": {"type": "text", "name": "place-of-residence", "value": "МО, г.Королев"},
+      "caption": "Место жительства"
+    },
+    {
+      "input": true,
+      "input_attr": {"type": "text", "name": "skype", "value": ""},
+      "caption": "Скайп"
+    },
+    {
+      "input": true,
+      "input_attr": {"type": "email", "name": "email", "value": "3amile@gmail.com"},
+      "caption": "Почта"
+    },
+    {
+      "radio": true,
+      "type": "radio",
+      "caption": "Выпускник ",
+      "link_attr": {"href": "https://htmlacademy.ru", "target": "_blank"},
+      "name": "htmlacademy",
+      "link_value": "htmlacademy.ru",
+      "options": [{"value": "yes", "label": "Да", "checked": false}, 
+        {"value": "no", "label": "Нет", "checked": true}]
+    },
+    {
+      "checkbox": true,
+      "type": "checkbox",
+      "caption": "Практические навыки",
+      "name": "skills",
+      "groups": [
+        [
+          {"name": "BEM", "label": "Методология БЭМ", "checked": true}, 
+          {"name": "jQuery", "label": "jQuery", "checked": false},
+          {"name": "GRUNT", "label": "Использую GRUNT", "checked": false}, 
+          {"name": "HAML", "label": "HAML", "checked": false}, 
+          {"name": "SASS", "label": "SASS", "checked": false}, 
+          {"name": "LESS", "label": "LESS", "checked": false}, 
+          {"name": "CoffeeScript", "label": "CoffeeScript", "checked": false}
+        ],
+        [
+          {"name": "Jade", "label": "Jade", "checked": true}, 
+          {"name": "Stylus", "label": "Stylus", "checked": true}, 
+          {"name": "Angular", "label": "Знаю (изучаю) Angular", "checked": false}, 
+          {"name": "Android", "label": "Верстка под Android", "checked": false}, 
+          {"name": "iOS", "label": "Верстка под iOS", "checked": false}, 
+          {"name": "WindowsPhone", "label": "Верстка под Windows Phone", "checked": false}
+        ],
+        [
+          {"name": "Mailing", "label": "Верстка рассылок", "checked": false}, 
+          {"name": "Adaptive", "label": "Адаптивная верстка", "checked": false}, 
+          {"name": "Dropbox", "label": "Использую Dropbox", "checked": true}, 
+          {"name": "Gmail", "label": "Использую Gmail", "checked": true}, 
+          {"name": "GitHub", "label": "Использую GitHub", "checked": true}
+        ]
+      ]
+    },
+    {
+      "js": true,
+      "name": "js",
+      "caption": "Уровень владения JavaScript",
+      "list": ["Не владею", "Использую готовые решения", "Использую готовые решения <br> и умею их переделывать", "Пишу сложные скрипты"]
+    },
+    {
+      "input": true,
+      "input_attr": {"type": "date", "name": "date", "value": "25.02.2017"},
+      "caption": "Дата заполнения"
+    }
+]
