@@ -80,16 +80,16 @@ px_to_percent(size, base = $base_container_width)
 	size / base * 100%
 
 // Set padding top & bottom in em
-set_padding_vertical_em(top, bottom, base = $base_font_size)
+padding-y_em(top, bottom, base = $base_font_size)
 	padding-top px_to_em(top, base)
 	padding-bottom px_to_em(bottom, base)
 
 // Set padding left & right in em
-set_padding_horizontal_em(top, bottom, base = $base_font_size)
+padding-x_em(top, bottom, base = $base_font_size)
 	padding-left px_to_em(top, base)
 	padding-right px_to_em(bottom, base)
 
 // Set padding left & right in percent
-set_padding_horizontal_percent(left, right, base = $base_container_width)
+padding-x_percent(left, right, base = $base_container_width)
 	padding-left px_to_percent(left, base)
 	padding-right px_to_percent(right, base)

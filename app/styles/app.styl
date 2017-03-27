@@ -4,7 +4,6 @@ import('helpers/svg-size')
 @import 'helpers/mixins'
 @import 'helpers/fonts'
 @import 'helpers/optimize'
-@import 'layouts/layout'
 
 import('../blocks/**/*')
 
@@ -18,11 +17,7 @@ body
 	line-height 1.5
 	color $text_color
 	background-color $bg_color
-
-@media screen and (max-width: 600px)
-	body
-		font-size .825em
-
+	
 a, legend, label
 	font-weight 700
 
@@ -35,12 +30,10 @@ fieldset
 
 legend
 	float left
+	color $text_color
 
 label
 	display inline-block
 
 .display-flex
 	flexbox_display()
-
-@media screen and (min-width:0\0)
-	color gray

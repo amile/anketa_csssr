@@ -1,20 +1,19 @@
 include /../node_modules/bemto.jade/bemto
 include /../node_modules/jade-injected/jade-injected
 include ../page/page
-include ../header/header
-include ../main/main
-include ../form/form
-include ../input/input
-include ../slider/slider
-include ../list/list
-include ../link/link
-include ../radio/radio
-include ../checkbox/checkbox
+
 include ../scripts/scripts
 
 doctype html
-html(lang='ru')
-	include ../head/head
-	+page
-		block content
-		+scripts(['app.min.js'])
+
+<!--[if IE 9]>
+<html lang='ru' class='ie9'>
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang='ru'>
+<!--<![endif]-->
+include ../head/head
++page
+	block content
+	+scripts(['app.min.js'])
+</html>

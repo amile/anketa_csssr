@@ -11,12 +11,12 @@
     },
     {
       "input": true,
-      "input_attr": {"type": "text", "name": "place-of-residence", "value": "МО, г.Королев"},
+      "input_attr": {"type": "text", "name": "place-of-residence", "value": "РФ, МО, г.Королев"},
       "caption": "Место жительства"
     },
     {
       "input": true,
-      "input_attr": {"type": "text", "name": "skype", "value": ""},
+      "input_attr": {"type": "text", "name": "skype", "value": "live:amile24"},
       "caption": "Скайп"
     },
     {
@@ -43,7 +43,7 @@
         [
           {"name": "BEM", "label": "Методология БЭМ", "checked": true}, 
           {"name": "jQuery", "label": "jQuery", "checked": false},
-          {"name": "GRUNT", "label": "Использую GRUNT", "checked": false}, 
+          {"name": "GRUNT", "label": "Использую GRUNT", "checked": true}, 
           {"name": "HAML", "label": "HAML", "checked": false}, 
           {"name": "SASS", "label": "SASS", "checked": false}, 
           {"name": "LESS", "label": "LESS", "checked": false}, 
@@ -74,7 +74,7 @@
     },
     {
       "input": true,
-      "input_attr": {"type": "date", "name": "date", "value": "25.02.2017"},
+      "input_attr": {"type": "text", "name": "date", "value": "26.03.2017"},
       "caption": "Дата заполнения"
     }
 ]

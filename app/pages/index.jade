@@ -1,9 +1,13 @@
+include /blocks/container/container
+include /blocks/header/header
+include /blocks/main/main
+
 extends /blocks/layout-default/layout-default
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'CSSSR Application Form';
 
 block content
-	div.container
+	+container
 		+header
 		+main

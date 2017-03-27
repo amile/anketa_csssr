@@ -11,7 +11,6 @@ import rename from 'gulp-rename';
 import errorHandler from 'gulp-plumber-error-handler';
 import getData from 'jade-get-data';
 import staticHash from 'gulp-static-hash';
-//import gulpData from 'gulp-data';
 
 const data = {
 	getData: getData('app/data'),

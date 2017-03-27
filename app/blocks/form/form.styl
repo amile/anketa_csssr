@@ -1,25 +1,28 @@
-/* Form modules */
+/* Form module */
 
 .form
 	display block
 
 .form__row
 	&_htmlacademy
-		set_padding_vertical_em(16, 0)
+		padding-y_em(16, 0)
 
 	&_skills
-		set_padding_vertical_em(23, 0)
+		padding-top 1.41em // 23px
 		clearfix()
 
 	&_js
-		set_padding_vertical_em(62, 45)
-		set_padding_horizontal_em(11, 0)
+		padding-y_em(62, 45)
+		padding-x_em(11, 0)
 
 .form__row-caption
-	font-size (22 * $px_em)
-	line-height 2.22158
-	letter-spacing px_to_em(.2, 22)
+	font-size (1.38em) // 22px
+	line-height 2.22 // 49px
+	letter-spacing .1px
 
+	@media all and (-webkit-min-device-pixel-ratio:0)
+		line-height (49 / 22) /* коррекция округлений для Chrome, Safari, Edge */
+		
 	&_js
 		margin-bottom px_to_em(11, 22)
 
@@ -35,22 +38,24 @@
 	position relative
 	clear both
 
-	top px_to_em(-1, 14)
-	margin-bottom px_to_em(14, 14)
-	set_padding_horizontal_em(19, 0, 14)
-	font-size (14 * $px_em)
+	top -3px
+	margin-bottom px_to_em(13, 14)
+	padding-x_em(19, 0, 14)
+	font-size .874em // 14px
 	font-weight 400
-	line-height (22 / 14)
+	line-height 1.57 // 22px
 	color #3d3d3d
-	// outline 1px solid tomato
+	
+	@media all and (-webkit-min-device-pixel-ratio:0)
+		line-height 1.579 /* коррекция округлений для Chrome, Safari, Edge */
+	
 
 	&_asterisk
 		position absolute
-		top px_to_em(4, 36)
-		left px_to_em(2, 36)
+		top px_to_em(2, 36)
+		left px_to_em(1, 36)
 		font-size (36 * $px_em)
 		line-height 1
-		outline 1px solid blue
 
 .form__slider
 	margin-left 2px

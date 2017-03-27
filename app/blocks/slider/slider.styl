@@ -1,51 +1,51 @@
+/* Slider module */
+
 .slider
 	position relative
 	display block
-	background url('/assets/images/line-horizontal.png') no-repeat -6px -7px
+	background url('/assets/images/line-horizontal.png') no-repeat -6px -8px
 	background-size 101% 60px
-	outline 1px solid blue
 	
-	padding-top 51px
+	padding-top 48px
 	clearfix()	
 	stop_user_select()
 
 .slider__thumb 
 	position absolute
-	top 4px
-	left -8px
+	top 1px
+	left 367px
 	width 17px
 	height 15px
 	background url('/assets/images/triangle.png') no-repeat 0 0
-	outline 1px solid tomato
 
 .slider__item
 	position relative
 	width 30%
-	outline 1px dotted brown
 	
 	&:first-child
-		width 19.5%
+		width 19%
 
 	&:last-child
-		width 20.5%
+		width 21%
 		text-align right
 
 	&::before
 		position absolute
-		top -29px
+		top -28px
 		left -1px
 		width 4px
 		height 26px
 		content ''
-		background url('/assets/images/line-vertical.png') no-repeat -7px 0
+		background url('/assets/images/line-vertical.png') no-repeat -7px -1px
 		
 
 	&:nth-child(2)::before,
 	&:nth-child(3)::before
-		top -28px
+		left 2.5px
 		background-position -7px -13px
 
 	&:last-child::before
-		right -2px
-		left auto		
-	
+		top -29px
+		right -3px
+		left auto
+		

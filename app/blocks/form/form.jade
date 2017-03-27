@@ -1,3 +1,10 @@
+include ../input/input
+include ../slider/slider
+include ../list/list
+include ../link/link
+include ../radio/radio
+include ../checkbox/checkbox
+
 mixin form()
 	+b('form').form&attributes(attributes)
 
@@ -5,19 +12,19 @@ mixin form()
 			+input(row.caption, row.input_attr)(class='form__row_input display-flex')
 
 		mixin fieldset(row, link=false)
-			fieldset.form__row(class="form__row_" + row.name)
-				legend.form__row-caption(class="form__row-caption_" + row.name)= row.caption
+			fieldset.form__row(class='form__row_' + row.name)
+				legend.form__row-caption(class='form__row-caption_' + row.name)= row.caption
 					if link
 						+link(row.link_value)&attributes(row.link_attr)
 				block
 
 		mixin row_radio(row)
-			+ fieldset(row, true)
+			+fieldset(row, true)
 				for option in row.options
 					+radio(row.name, option)
 										
 		mixin row_checkbox(row)
-			+ fieldset(row)
+			+fieldset(row)
 				p.form__text
 					span.form__text_asterisk *
 					| Отметьте только те технологии и типы задач, с которыми вы хорошо знакомы. Отсутствие опыта отнюдь не означает, что у вас меньше шансов стать нашим сотрудником. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
@@ -27,20 +34,20 @@ mixin form()
 							+checkbox(el)
 
 		mixin row_js(row)
-			+ fieldset(row)
+			+fieldset(row)
 				+slider(row.list)(class='form__slider')
 
 		mixin generate_row(row)
 			if row.input
-				+ row_input(row)
+				+row_input(row)
 			else if row.radio
-				+ row_radio(row)
+				+row_radio(row)
 			else if row.checkbox
-				+ row_checkbox(row)
+				+row_checkbox(row)
 			else if row.js
-				+ row_js(row)
+				+row_js(row)
 			
 		- var rows = getData('data');
 
 		for row in rows
-			+ generate_row(row)
+			+generate_row(row)

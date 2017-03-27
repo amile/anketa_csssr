@@ -2,5 +2,5 @@ mixin input(caption, input_attr)
 	+b.input&attributes(attributes)
 		- input_attr.id = input_attr.name;
 		label.input__label.form__row-caption(for=input_attr.id)= caption
-		div.input__wrapper(class='input__wrapper_' + input_attr.type)
+		div.input__wrapper(class='input__wrapper_' + input_attr.name)
 			input.input__input&attributes(input_attr)

@@ -1,0 +1,38 @@
+/* Input module for IE 9- */
+
+.ie9 .input
+	position relative
+	
+	&__wrapper
+		position absolute
+		top 0
+		bottom 0
+
+		right 1px
+		
+		&_date
+			right auto
+			width 27%
+	
+	&__input 
+		width 100%
+
+sizes = 152px 160px 200px 74px 73px 190px
+
+set_left(size)
+	.input__label
+		width size
+
+	.input__wrapper
+		left size
+
+for n in (1..6)
+	.ie9
+		if n < 6
+			.input:nth-child({n})
+				i = n - 1
+				set_left(sizes[i])
+		else
+			.input:last-child
+				set_left(sizes[-1])
+				
