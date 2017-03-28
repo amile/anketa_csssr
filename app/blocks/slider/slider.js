@@ -66,7 +66,6 @@ Slider.prototype.stopThumb = function (pos) {
 	}
 };
 
-
 const slider = new Slider();
 slider.initialThumbPoint();
 
@@ -82,6 +81,7 @@ slider.thumb.addEventListener('mousedown', function (eventDown) {
 		document.removeEventListener('mousemove', moveHandler, false);
 		const pos = eventUp.pageX - slider.sliderBox.left;
 		slider.stopThumb(pos);
+		document.removeEventListener('mouseup', upHandler, false);
 	}
 	document.addEventListener('mousemove', moveHandler, false);
 	document.addEventListener('mouseup', upHandler, false);
@@ -104,6 +104,7 @@ slider.thumb.addEventListener('touchstart', function (eventDown) {
 			const pos = eventUp.changedTouches[0].pageX - slider.sliderBox.left;
 			slider.stopThumb(pos);
 		}
+		document.removeEventListener('touchend', upHandler, false);
 	}
 	document.addEventListener('touchmove', moveHandler, false);
 	document.addEventListener('touchend', upHandler, false);
